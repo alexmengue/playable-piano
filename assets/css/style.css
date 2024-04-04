@@ -6,3 +6,79 @@
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
 }
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: #E3F2FD;
+}
+
+.wrapper {
+  width: 780px;
+  border-radius: 20px;
+  padding: 35px 40px;
+  background: #141414;
+}
+
+.wrapper header {
+  color: #B2B2B2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header h2 {
+  font-size: 1.6rem;
+}
+
+header .column {
+  display: flex;
+  align-items: center;
+}
+
+header .column span {
+  font-weight: 500;
+  margin-right: 15px;
+  font-size: 1.19rem;
+}
+
+.volume-slider input {
+  outline: none;
+  accent-color: #FFFFFF;
+}
+
+.keys-checkbox input {
+  width: 60px;
+  height: 30px;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+  appearance: none;
+  border-radius: 30px;
+  background: #4B4B4B;
+}
+
+.keys-checkbox input::before {
+  content: '';
+  height: 20px;
+  width: 20px;
+  top: 50%;
+  left: 5px;
+  border-radius: inherit;
+  position: absolute;
+  background: #8C8C8C;
+  transform: translateY(-50%);
+  transition: all 0.3s ease;
+}
+
+.keys-checkbox input:checked::before {
+  left: 35px;
+  background: #FFFFFF;
+}
+
+.piano-keys .key {
+  list-style: none;
+  color: #A2A2A2;
+}
