@@ -8,6 +8,10 @@ const playTune = (key) => {
 
   const clickedKey = document.querySelector(`[data-keys='${key}']`);
   clickedKey.classList.add('active');
+
+  setTimeout(() => {
+    clickedKey.classList.remove('active');
+  }, 150);
 };
 
 pianoKeys.forEach(key => {
