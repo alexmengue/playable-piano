@@ -1,6 +1,6 @@
 const pianoKeys = document.querySelectorAll('.piano-keys .key');
 
-let audio = new Audio('assets/tunes/a.wav');
+let allKeys = [], audio = new Audio('assets/tunes/a.wav');
 
 const playTune = (key) => {
   audio.src = `assets/tunes/${key}.wav`;
@@ -15,11 +15,12 @@ const playTune = (key) => {
 };
 
 pianoKeys.forEach(key => {
+  allKeys.push(key.dataset.key);
   key.addEventListener('click', () => playTune(key.dataset.key));
 });
 
 const pressedKey = (event) => {
-  playTune(event.key);
+  if (allKeys.includes(event.key)) playTune(event.key);
 };
 
 document.addEventListener('keydown', pressedKey);
