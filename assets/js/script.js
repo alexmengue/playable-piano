@@ -1,4 +1,5 @@
-const pianoKeys = document.querySelectorAll('.piano-keys .key');
+const pianoKeys = document.querySelectorAll('.piano-keys .key'),
+volumeSlider = document.querySelector('.volume-slider input');
 
 let allKeys = [], audio = new Audio('assets/tunes/a.wav');
 
