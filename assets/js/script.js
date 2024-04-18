@@ -21,6 +21,10 @@ pianoKeys.forEach(key => {
   key.addEventListener('click', () => playTune(key.dataset.key));
 });
 
+const handleVolume = (event) => {
+  audio.volume = event.target.value;
+};
+
 const pressedKey = (event) => {
   if (allKeys.includes(event.key)) playTune(event.key);
 };
