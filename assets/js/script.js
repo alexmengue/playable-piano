@@ -30,5 +30,6 @@ const pressedKey = (event) => {
   if (allKeys.includes(event.key)) playTune(event.key);
 };
 
+keysCheckbox.addEventListener('click', showHideKeys);
 volumeSlider.addEventListener('input', handleVolume);
 document.addEventListener('keydown', pressedKey);
