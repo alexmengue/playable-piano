@@ -26,6 +26,10 @@ const handleVolume = (event) => {
   audio.volume = event.target.value;
 };
 
+const showHideKeys = () => {
+  //soon
+};
+
 const pressedKey = (event) => {
   if (allKeys.includes(event.key)) playTune(event.key);
 };
