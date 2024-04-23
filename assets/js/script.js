@@ -27,7 +27,7 @@ const handleVolume = (event) => {
 };
 
 const showHideKeys = () => {
-  //soon
+  pianoKeys.forEach(key => key.classList.toggle('hide'));
 };
 
 const pressedKey = (event) => {
